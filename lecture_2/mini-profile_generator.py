@@ -28,7 +28,7 @@ hobbies = []
 is_stop = True
 while is_stop:
     hobby = input("Enter a favorite hobby or type 'stop' to finish: ")
-    if hobby == 'stop':
+    if hobby.lower() == 'stop':
         is_stop = False
     else:
         hobbies.append(hobby)
