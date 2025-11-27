@@ -32,6 +32,8 @@ def add_grades():  # function 2. Add a grades for a student
                             print("Grades only can be between 0 and 100")
                 except ValueError:
                     print("Error: Input an integer number[0; 100] or 'done'")
+                except Exception as ex:
+                    print(f"Something went wrong. Error: {ex}")
     if not is_student:
         print("There's no student with such name")
 
@@ -50,6 +52,8 @@ def show_reports():  # function 3. Show report (all students)
                 print(f"{i['name']}'s average grade is {average}")
             except ZeroDivisionError:
                 print(f"{i['name']}'s average grade is N/A")
+            except Exception as ex:
+                print(f"Something went wrong. Error: {ex}")
 
         if not avg_stud_grades:
             print("All the students have no grades")
@@ -100,3 +104,5 @@ while is_exit:  # a menu loop
 
     except ValueError:
         print('Error: Input a number(1-5)')
+    except Exception as error:
+        print(f"Something went wrong. Error: {error}")
