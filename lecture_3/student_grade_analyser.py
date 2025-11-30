@@ -98,20 +98,6 @@ while is_exit:  # a menu loop
                 top_performer()
             case 5:  # Function 5. Exit
                 is_exit = False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 print("The program is finished")
             case _:
                 print('Choose one of these numbers (1-5)')
